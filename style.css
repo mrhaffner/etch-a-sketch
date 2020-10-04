@@ -3,7 +3,7 @@ body {
 
 #divContainer {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     background-color: #2196F3;
     padding: 10px;
     height: 500px;
@@ -14,4 +14,6 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
 }
+
+
 
