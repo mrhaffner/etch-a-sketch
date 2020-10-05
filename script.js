@@ -1,18 +1,54 @@
-let htmlElements = "";
+let htmlElements
 let columns = 4
-
-for (let i = columns**2; i > 0; i--) {
-   htmlElements += '<div class="snake"></div>';
-}
 let container = document.getElementById("divContainer");
-container.innerHTML = htmlElements;
+let box = container.childNodes
 
-container.style.gridTemplateColumns = `repeat(${columns}, auto)`
-
-let box = document.getElementById('divContainer').childNodes
-for (let i = 0; i < box.length; i++) {
-    box[i].addEventListener('mouseover', () => {
-        box[i].style.backgroundColor = 'green';
-
-    })
+function createBoxes(){
+    htmlElements = "";
+    for (let i = columns**2; i > 0; i--) {
+        htmlElements += '<div class="snake"></div>';
+    }
+    container.innerHTML = htmlElements;
+    container.style.gridTemplateColumns = `repeat(${columns}, auto)`;
+    for (let i = 0; i < box.length; i++) {
+        box[i].addEventListener('mouseover', () => {
+            box[i].style.backgroundColor = 'green';
+        })
+    }
 }
+
+createBoxes();
+
+
+
+
+let button = document.querySelector('resetButton')
+resetButton.addEventListener('click', () => {
+    promptNumber()
+})
+
+
+function promptNumber() {
+    columns = prompt('How many squares per side would you like (up to 100)')
+    if (columns > 100 || columns < 1 || columns % 1 !== 0 || isNaN(columns) || columns === '0') {
+        promptNumber();
+    }
+    removeBoxes();
+    createBoxes();
+}
+
+//function removeBoxes() {
+//    const myNode = document.getElementById("divContainer");
+//    myNode.innerHTML = '';
+//}
+
+function removeBoxes() {
+    const parent = document.getElementById("divContainer")
+    while (parent.firstChild) {
+        parent.firstChild.remove()
+    }
+}
+
+//button deletes all .snakes
+//button runs a function to create all snakes
+//button then runs a function to add onclick listener event to buttons
