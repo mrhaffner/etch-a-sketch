@@ -1,19 +1,43 @@
 body {
 }
 
-#divContainer {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    background-color: #2196F3;
-    padding: 10px;
-    height: 500px;
-    width: 500px;
-  }
-.snake {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    
+#redBox {
+  /*padding: 110px;*/
+  background-color: red;
+  margin: auto;
+  height: 700px;
+  width: 700px;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
 }
 
+#title {
+  align-self: flex-start;
+  position: absolute;
+  text-align: center;
+}
 
+#divContainer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  height: 500px;
+  width: 500px;
+  position: absolute;
+}
+.snake {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#fakeButton {
+  align-self: flex-end;
+}
+
+#resetButton {
+  align-self: flex-end;
+}
 

@@ -37,10 +37,6 @@ function promptNumber() {
     createBoxes();
 }
 
-//function removeBoxes() {
-//    const myNode = document.getElementById("divContainer");
-//    myNode.innerHTML = '';
-//}
 
 function removeBoxes() {
     const parent = document.getElementById("divContainer")
@@ -48,7 +44,3 @@ function removeBoxes() {
         parent.firstChild.remove()
     }
 }
-
-//button deletes all .snakes
-//button runs a function to create all snakes
-//button then runs a function to add onclick listener event to buttons
