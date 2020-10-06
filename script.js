@@ -1,5 +1,5 @@
 let htmlElements
-let columns = 4
+let columns = 50
 let container = document.getElementById("divContainer");
 let box = container.childNodes
 
@@ -12,21 +12,17 @@ function createBoxes(){
     container.style.gridTemplateColumns = `repeat(${columns}, auto)`;
     for (let i = 0; i < box.length; i++) {
         box[i].addEventListener('mouseover', () => {
-            box[i].style.backgroundColor = 'green';
+            box[i].style.backgroundColor = 'rgb(48,48,48)';
         })
     }
 }
 
 createBoxes();
 
-
-
-
 let button = document.querySelector('resetButton')
 resetButton.addEventListener('click', () => {
     promptNumber()
 })
-
 
 function promptNumber() {
     columns = prompt('How many squares per side would you like (up to 100)')
@@ -36,7 +32,6 @@ function promptNumber() {
     removeBoxes();
     createBoxes();
 }
-
 
 function removeBoxes() {
     const parent = document.getElementById("divContainer")

@@ -4,7 +4,6 @@ body {
 }
 
 #redBox {
-  background-color: red;
   margin: auto;
   height: 700px;
   width: 700px;
@@ -28,10 +27,9 @@ body {
   position: absolute;
   text-align: center;
   margin-top: 35px;
-  color: #d4af37;
+  color: #aaa9ad;
   text-shadow: 2px 2px 4px #000000;
 }
-
 
 #divContainer {
   display: grid;
@@ -39,10 +37,11 @@ body {
   height: 500px;
   width: 500px;
   position: absolute;
+  box-shadow: 1px 1px 5px 0 #000000;
+  
 }
 .snake {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(211, 211, 211, 1);
 }
 
 #fakeButton, #resetButton {
@@ -52,6 +51,7 @@ body {
   width: 85px;
   margin-bottom: 15px;
   box-shadow: 1px 1px 10px 0 #000000;
+  
 }
 
 button:focus {
@@ -63,6 +63,18 @@ button:focus {
   font-family: 'Rondo', normal;
 }
 
-#fakeButton {
-/*make it spin*/
+#fakeButton:hover, #resetButton:hover {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
