@@ -1,5 +1,5 @@
 body {
-  font-family: 'Rondo', normal;
+  font-family: RondoMN;
   height: 100%
 }
 
@@ -26,9 +26,10 @@ body {
   align-self: flex-start;
   position: absolute;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 25px;
   color: #aaa9ad;
   text-shadow: 2px 2px 4px #000000;
+  font-size: 2.5em;
 }
 
 #divContainer {
@@ -60,7 +61,8 @@ button:focus {
 
 #resetButton {
   margin-right: 65%;
-  font-family: 'Rondo', normal;
+  font-family: RondoMN;
+  font-size: 1.2em;
 }
 
 #fakeButton:hover, #resetButton:hover {
@@ -77,4 +79,9 @@ button:focus {
   to {
       transform:rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: RondoMN;
+  src: url(RondoMNRegular.ttf) ;
 }
